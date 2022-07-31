@@ -24,7 +24,7 @@ def addStudent(request):
         form = StudentForm(request.POST)
         if form.is_valid():
             form.save()   #Creates the user object
-            return redirect('home')
+            return redirect('/')
     
     
     context = {'form': form}
@@ -33,7 +33,7 @@ def addStudent(request):
 def delete(request, pk):
     to_delete = Student.objects.get(id=pk)
     to_delete.delete()
-    return redirect('home')
+    return redirect('/')
 
 def modify(request, pk):
     toUpdate = Student.objects.get(id=pk)
@@ -42,7 +42,7 @@ def modify(request, pk):
         form = StudentForm(request.POST, instance=toUpdate)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('/')
     
     context = {'form': form}
     return render(request, 'modify.html', context)
