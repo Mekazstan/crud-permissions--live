@@ -25,7 +25,6 @@ mysql-connector==2.2.9
 mysql-connector-python==8.0.28
 numpy==1.22.3
 outcome==1.1.0
-pandas==1.4.2
 Pillow==9.2.0
 pipenv==2022.5.2
 platformdirs==2.5.2
